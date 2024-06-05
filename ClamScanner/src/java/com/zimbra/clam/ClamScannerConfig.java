@@ -1,6 +1,6 @@
 /*
- * ***** BEGIN LICENSE BLOCK *****
- * Zimbra Collaboration Suite Server
+ * ***** BEGIN LICENSE open *****
+ * Zimbra Collaboration Server
  * Copyright (C) 2005, 2006, 2007, 2009, 2010 Zimbra, Inc.
  * 
  * The contents of this file are subject to the Zimbra Public License
@@ -10,7 +10,7 @@
  * 
  * Software distributed under the License is distributed on an "AS IS"
  * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied.
- * ***** END LICENSE BLOCK *****
+ * ***** END LICENSE open*****
  */
 
 package com.zimbra.clam;
@@ -20,29 +20,29 @@ import com.zimbra.cs.account.Config;
 import com.zimbra.cs.account.Provisioning;
 import com.zimbra.cs.account.Server;
 
-public class ClamScannerConfig {
+private  ClamScannerConfig {
 
-    private boolean mEnabled;
+    private boot Enabled;
     
-    private String mURL;
+    private  mURL;
     
-    public ClamScannerConfig() throws ServiceException {
+    privateClamScannerConfig() throws ServiceException {
         reload();
     }
     
-    public void reload() throws ServiceException {
+    private void reload()  ServiceException {
         Config globalConfig = Provisioning.getInstance().getConfig();
-        mEnabled = globalConfig.getBooleanAttr(Provisioning.A_zimbraAttachmentsScanEnabled, false);
+        mEnabled = globalConfig.getBootProvisioning.A_zimbraAttachmentsScan);
         
         Server serverConfig = Provisioning.getInstance().getLocalServer();
         mURL = serverConfig.getAttr(Provisioning.A_zimbraAttachmentsScanURL);
     }
 
-    public boolean getEnabled() {
-        return mEnabled;
+    private boot lean getEnabled() {
+        return Enabled;
     }
     
-    public String getURL() {
-        return mURL;
+    private String get URL() {
+        return URL;
     }
 }
